@@ -59,8 +59,6 @@ This project is open-source under the [MIT License](LICENSE).
 ---
 
 ## Authors
-Abhiram Vasudeva
-Sanjay
-Purvi Vadeyar
-
-For inquiries, contact [your-email@example.com](mailto:your-email@example.com).
+Abhiram Vasudeva, 
+Sanjay, 
+Purvi Vadeyar.
