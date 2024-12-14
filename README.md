@@ -1,64 +1,98 @@
-# CS524
-# Climate Change and Correlation Analyzer
 
-## Problem Overview
+# Climate Impact and Correlation Analyzer
 
-Climate change is one of the most critical challenges of our time, impacting ecosystems, economies, and societies globally. Rising temperatures, increasing greenhouse gas emissions, sea-level rise, and natural disasters are interconnected phenomena that require integrated analysis. Existing tools lack the capability to explore these relationships interactively and comprehensively. Our project bridges this gap by providing a visualization platform for policymakers, researchers, and the public to derive actionable insights and make data-driven decisions.
+## Overview
+The global climate crisis—marked by rising temperatures, melting ice caps, and increasing natural disasters—has disrupted ecosystems, agriculture, and human health. Understanding the interconnectedness of these factors is critical for evidence-based decision-making and effective climate strategies.
+
+This project introduces **Climate Impact and Correlation Analyzer**, an interactive data visualization platform that combines global datasets on surface temperature, carbon emissions, sea levels, and natural disasters. The platform provides advanced visual tools to analyze and uncover correlations, enabling researchers, policymakers, and stakeholders to make data-driven decisions.
 
 ---
 
-## Summary of Data
+## Data Summary
+The platform integrates the following datasets:
 
-We utilized publicly available datasets spanning various climate indicators:
+1. **Global Surface Temperature**: Monthly averages from the 18th century to present.
+2. **Carbon Emissions**: Country-level emissions data spanning the 20th century.
+3. **Sea Level Rise**: Historical mean sea level records from the 19th century onward.
+4. **Natural Disasters**: Compilation of events like floods, droughts, and extreme weather.
 
-- **Global Surface Temperature Dataset**: Historical monthly average temperatures.
-- **Carbon Emissions Dataset**: Country-level CO₂-equivalent emissions data.
-- **Sea Level Rise Dataset**: Mean sea-level data from the 19th century to 2020.
-- **Natural Disaster Dataset**: Frequency and types of disasters (e.g., floods, droughts) from 1900–2024.
+All datasets were preprocessed to ensure consistency, including:
+- Cleaning and standardizing units.
+- Aligning data to a "Country-Year" format.
+- Handling missing values through interpolation.
 
-All datasets were preprocessed for consistency, handling missing values and aligning temporal and spatial granularity.
+Sources:
+- [Global Surface Temperature Data](https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data)
+- [Carbon Emissions Data](https://www.kaggle.com/datasets/ankanhore545/carbon-dioxide-emissions-of-the-world)
+- [Sea Level Rise Data](https://www.kaggle.com/datasets/jarredpriester/global-sea-level-rise)
+- [Natural Disaster Data](https://ourworldindata.org/natural-disasters)
 
 ---
 
 ## Research Challenges
+1. **Data Quality**: Handling missing or incomplete data introduced interpolation uncertainty.
+2. **Data Volume**: Large datasets required computationally efficient preprocessing.
+3. **Visualization Complexity**: Designing intuitive, multi-dimensional visualizations for non-linear relationships was challenging.
 
-1. **Data Quality**: Missing and incomplete values required careful imputation and cleaning.
-2. **Data Volume**: Large datasets necessitated efficient processing techniques.
-3. **Visualization Complexity**: Designing intuitive multi-dimensional visualizations was challenging.
-4. **Usability**: Ensuring interactivity and accessibility for a diverse audience.
+---
+
+## Running the Code
+### Prerequisites
+- **Python** (version >= 3.8)
+- Libraries: `Pandas`, `NumPy`, `Plotly`, `Chart.js`, `Flask`
+
+### Steps
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/CERZ3X/CS524.git
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the interface:
+   ```bash
+   python Climate_Analyzer.py
+   ```
+4. Open `http://localhost:5000` in your browser to interact with the platform.
 
 ---
 
 ## Results
-
-### Visualizations
-- **Temperature Analysis**: Calendar heat maps, 3D globes, and choropleth maps.
-- **Carbon Emissions**: Heat maps, bar charts, and line plots highlighting emission trends.
-- **Sea Level Rise**: Area and line charts showing historical trends and cumulative impacts.
-- **Natural Disasters**: Stacked bar charts and correlation plots linking disasters with temperature anomalies.
-
 ### Key Insights
-1. **Emissions and Temperature**: A strong positive correlation exists between CO₂ emissions and temperature anomalies.
-2. **Sea Level and Warming**: Accelerating sea-level rise is strongly linked to rising global temperatures.
-3. **Natural Disasters**: Increasing temperature anomalies correlate with more frequent disasters, such as floods and extreme weather.
+1. **Correlation Between Carbon Emissions and Temperature**:
+   - A strong positive correlation, especially post-20th century.
+2. **Rising Sea Levels**:
+   - Accelerated in recent decades due to ice melt and thermal expansion.
+3. **Natural Disaster Trends**:
+   - Frequency and intensity of disasters correlate with temperature anomalies.
+4. **Regional Disparities**:
+   - Certain regions exhibit disproportionately high emissions and temperature anomalies.
+
+### Example Visualizations
+- **Heatmaps**: Show regional temperature variations.
+- **3D Globe**: Interactive temperature anomaly visualization.
+- **Stacked Bar Charts**: Natural disaster frequencies over time.
+- **Correlation Heatmaps**: Explore relationships between temperature anomalies, emissions, and disasters.
 
 ---
 
-## Future Enhancements
-
-- **Expanded Datasets**: Incorporate socioeconomic data to study climate vulnerability.
-- **Predictive Models**: Use machine learning for forecasting climate trends and risks.
-- **Usability Improvements**: Enhance interactivity and accessibility for broader use.
+## Future Work
+- **Data Integration**: Include socioeconomic indicators like GDP and population density.
+- **Predictive Models**: Leverage machine learning for forecasting climate trends.
 
 ---
 
-## License
-
-This project is open-source under the [MIT License](LICENSE).
+## References
+1. IPCC AR6 Synthesis Report: Climate Change 2023.
+2. Liu, C., et al. "Interactive Climate Data Analysis Dashboard," IEEE Transactions, 2019.
+3. Smith, P., et al. "Linking Emissions and Sea-Level Rise," Climate Journal, 2021.
+4. NASA GISS, "Surface Temperature Analysis," 2024.
+5. Kaggle Datasets, 2024.
 
 ---
 
 ## Authors
-Abhiram Vasudeva, 
-Sanjay, 
-Purvi Vadeyar.
+Abhiram Vasudeva 
+Sanjay Kalaivanan
+Purvi Vadher
