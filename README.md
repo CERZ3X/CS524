@@ -93,6 +93,6 @@ Sources:
 ---
 
 ## Authors
-Abhiram Vasudeva 
-Sanjay Kalaivanan
-Purvi Vadher
+Abhiram Vasudeva ,
+Sanjay Kalaivanan ,
+Purvi Vadher.
